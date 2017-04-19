@@ -149,7 +149,6 @@ int main(int argc, char **argv)
 		if(i == 0)
 			start_time = t1;
 
-		//fprintf(stdout, "%20.10lf, %20.10lf\n", t1, t2);
 		time[i] = (t1 + t2)/2.0 - start_time;
 		i++;
 	}
@@ -194,8 +193,6 @@ int main(int argc, char **argv)
 			n_S++;
 		}
 	}
-
-	global_feature(accel_y, gyro_y, time, S_i, n_S, ofile_feature_name);
 
 	/* open the output file to write the peak and trough data */
 	printf("Attempting to write to file \'%s\'.\n", ofile_pt_name);
@@ -254,6 +251,12 @@ int main(int argc, char **argv)
 	}
 	fclose(fp);
 	printf("stride_detector completed successfuly. Exiting.\n");
+
+	global_feature(accel_y, gyro_y, time, S_i, n_S, ofile_feature_name);
+	//Feature_file_generator
+	//exe_global_neural_network(ofile_feature_name);
+
+
 
 	return 0;
 }

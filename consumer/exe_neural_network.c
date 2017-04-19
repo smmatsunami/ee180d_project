@@ -13,12 +13,6 @@ int exe_global_neural_network(char *global_feature_file)
 
     FILE *fp;
     fp = fopen(global_feature_file, "r+");
-    //There are total three types of movement which means we will have a 3*3 confusion matix
-    int conf_matrix[5][5] = {{0,0,0,0,0},
-                             {0,0,0,0,0},
-                             {0,0,0,0,0},
-                             {0,0,0,0,0},
-                             {0,0,0,0,0}};
     int answer[5] = {-1,-1,-1,-1,-1};
     int numLines = 0;
     int inN = 0;
@@ -117,8 +111,6 @@ int exe_walk_neural_network(char *walk_feature_file)
 
     FILE *fp;
     fp = fopen(walk_feature_file, "r+");
-    //There are total three types of movement which means we will have a 3*3 confusion matix
-    int conf_matrix[3][3] = {{0,0,0}, {0,0,0}, {0,0,0}};
     int answer[3] = {-1,-1,-1};
     int numLines = 0;
     int inN = 0;
