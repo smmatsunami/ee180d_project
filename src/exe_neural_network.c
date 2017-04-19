@@ -1,4 +1,5 @@
 #include "exe_neural_network.h"
+#include "feature_detector.h"
 
 int exe_global_neural_network(char *global_feature_file)
 {
@@ -73,6 +74,9 @@ int exe_global_neural_network(char *global_feature_file)
                 printf("Got Input values -> Movement type is %s\n", "Walking");
                 sleep(1);
                 //extract sub_feature
+                walk_feature(double* accel_x, double* time, 
+                    int* S_i, int n_S, "walk_features.csv");
+
                 //exe_Sub_network
                 break;
             case STAIR:
