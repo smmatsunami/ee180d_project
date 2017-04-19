@@ -277,9 +277,6 @@ int main(int argc, char **argv)
 				gyro_z[idx]);
 	}
 	fclose(fp);
-	
-
-
 	printf("stride_detector completed successfuly. Exiting.\n");
 
 	return 0;
