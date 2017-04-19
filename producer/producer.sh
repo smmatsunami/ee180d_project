@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DATA_DIR='raw_data'
+DATA_DIR='producer_data'
 for i in {0..1000..1}
 do
-	filename = (echo "data_"$i)
-	./imu_data filename
+	filename = (echo $DATA_DIR"/data_"$i)
+	./consumer filename
 done
