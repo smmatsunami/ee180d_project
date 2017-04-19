@@ -22,9 +22,6 @@ train_file_generator: ${SRC}/train_file_generator.c
 main: ${SRC}/main.c ${SRC}/stride_detector.c ${SRC}/feature_detector.c ${SRC}/math_func.c
 	$(CC) $(CFLAGS) -o main ${SRC}/main.c ${SRC}/feature_detector.c ${SRC}/stride_detector.c ${SRC}/math_func.c -lm $(LDFLAGS)
 
-walk_feature_detector: ${SRC}/walk_feature_detector.c
-	$(CC) $(CFLAGS) -o walk_feature_detector ${SRC}/walk_feature_detector.c -lm
-
 clean: 
 	rm -f main test_neural_network train_neural_net imu_data train_file_generator walk_feature_detector
 	rm -f *~

@@ -9,6 +9,9 @@
 #include "feature_detector.h"
 #include "stride_detector.h"
 #include "math_func.h"
+#include "exe_neural_network.h"
+#include "feature_file_generator.h"
+#include "run_sub_network.h"
 
 #define BUFF_SIZE 1024
 
