@@ -7,7 +7,7 @@ EXECUTABLES=$(SOURCES:.c=)
 
 all: consumer
 
-consumer: ${SRC}/main.c ${SRC}/stride_detector.c ${SRC}/feature_detector.c ${SRC}/math_func.c
+consumer: ${SRC}/consumer.c ${SRC}/stride_detector.c ${SRC}/feature_detector.c ${SRC}/math_func.c
 	$(CC) $(CFLAGS) -o main ${SRC}/main.c ${SRC}/feature_detector.c ${SRC}/stride_detector.c ${SRC}/math_func.c -lm $(LDFLAGS)
 
 clean:
